@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ommohame < ommohame@student.42abudhabi.ae> +#+  +:+       +#+        */
+/*   By: ommohame <ommohame@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 13:18:17 by ommohame          #+#    #+#             */
-/*   Updated: 2022/01/12 23:43:29 by ommohame         ###   ########.fr       */
+/*   Updated: 2022/01/28 16:21:02 by ommohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	ft_putendl_fd(char *s, int fd)
 {
 	size_t	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 	{

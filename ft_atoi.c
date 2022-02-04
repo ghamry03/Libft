@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ommohame < ommohame@student.42abudhabi.    +#+  +:+       +#+        */
+/*   By: ommohame <ommohame@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 09:35:02 by ommohame          #+#    #+#             */
-/*   Updated: 2021/12/26 16:48:32 by ommohame         ###   ########.fr       */
+/*   Updated: 2022/01/28 16:09:59 by ommohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

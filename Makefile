@@ -6,91 +6,83 @@
 #    By: ommohame < ommohame@student.42abudhabi.ae> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/09 18:24:09 by daelee            #+#    #+#              #
-#    Updated: 2022/01/12 21:13:33 by ommohame         ###   ########.fr        #
+#    Updated: 2022/01/17 07:36:08 by ommohame         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+NAME	=	libft.a
 
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g3
-AR = ar rcs
-RM = rm -f
+SRCS	= 	ft_memset.c \
+			ft_bzero.c \
+			ft_atoi.c \
+			ft_calloc.c \
+			ft_isalnum.c \
+			ft_isalpha.c \
+			ft_isascii.c \
+			ft_isdigit.c \
+			ft_isprint.c \
+			ft_memchr.c \
+			ft_memcmp.c \
+			ft_memcpy.c \
+			ft_memmove.c \
+			ft_memset.c \
+			ft_strchr.c \
+			ft_strdup.c \
+			ft_strjoin.c \
+			ft_strlcpy.c \
+			ft_strlen.c \
+			ft_strncmp.c \
+			ft_strrchr.c \
+			ft_strtrim.c \
+			ft_substr.c \
+			ft_tolower.c \
+			ft_toupper.c \
+			ft_strlcat.c \
+			ft_strnstr.c \
+			ft_strtrim.c \
+			ft_putchar_fd.c \
+			ft_putstr_fd.c \
+			ft_putnbr_fd.c \
+			ft_putendl_fd.c \
+			ft_itoa.c \
+			ft_strmapi.c \
+			ft_striteri.c \
+			ft_split.c \
 
-FILES = 	ft_memset \
-			ft_bzero \
-			ft_atoi \
-			ft_calloc \
-			ft_isalnum \
-			ft_isalpha \
-			ft_isascii \
-			ft_isdigit \
-			ft_isprint \
-			ft_memchr \
-			ft_memcmp \
-			ft_memcpy \
-			ft_memmove \
-			ft_memset \
-			ft_strchr \
-			ft_strdup \
-			ft_strjoin \
-			ft_strlcpy \
-			ft_strlen \
-			ft_strncmp \
-			ft_strrchr \
-			ft_strtrim \
-			ft_substr \
-			ft_tolower \
-			ft_toupper \
-			ft_strlcat \
-			ft_strnstr \
-			ft_strtrim \
-			ft_putchar_fd \
-			ft_putstr_fd \
-			ft_putnbr_fd \
-			ft_putendl_fd \
-			ft_itoa	\
-			ft_strmapi \
-			ft_striteri \
-			ft_split \
+SRCS_B = 	ft_lstnew.c \
+	  		ft_lstlast.c \
+	  		ft_lstadd_front.c \
+			ft_lstadd_back.c \
+	  		ft_lstsize.c \
+			ft_lstdelone.c \
+			ft_lstclear.c \
+			ft_lstiter.c \
+			ft_lstmap.c \
 
-FILES_B = 	ft_lstnew \
-	  		ft_lstlast \
-	  		ft_lstadd_front \
-			ft_lstadd_back \
-	  		ft_lstsize \
-			ft_lstdelone \
-			ft_lstclear \
-			ft_lstiter \
-			ft_lstmap \
+CC		=	gcc
 
+CFLAGS	=	-Wall -Wextra -Werror
 
-SRCS_DIR = ./
-SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
-SRCS_B = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES_B)))
+AR		=	ar rcs
 
-OBJS_DIR = ./
-OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES)))
-OBJS_B = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES_B)))
+RM		=	rm -rf
 
+OBJS 	=	$(SRCS:.c=.o)
 
-.c.o: $(SRCS)
-	$(CC) $(CFLAGS) -c -o $@ $<
+OBJS_B	=	$(SRCS_B:.c=.o)
 
-$(NAME): $(OBJS)
-	$(AR) $@ $^
+$(NAME)	:	$(OBJS)
+			$(AR) $(NAME) $(OBJS)
+			
+all		:	$(NAME)
 
-bonus: $(OBJS_B)
-	$(AR) $(NAME) $^
+bonus	:	$(OBJS_B)
+			$(AR) $(NAME) $(OBJS_B)
 
-all: $(NAME)
+clean	:
+			$(RM) $(OBJS) $(OBJS_B)
 
-clean:
-	$(RM) $(OBJS) $(OBJS_B)
+fclean	:	clean
+			$(RM) $(NAME)
 
-fclean: clean
-	$(RM) $(NAME)
-
-re: clean all
-
-.PHONY: bonus all clean fclean re
+re		:	fclean all

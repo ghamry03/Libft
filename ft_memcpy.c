@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ommohame < ommohame@student.42abudhabi.    +#+  +:+       +#+        */
+/*   By: ommohame <ommohame@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 03:51:26 by ommohame          #+#    #+#             */
-/*   Updated: 2021/12/23 11:31:05 by ommohame         ###   ########.fr       */
+/*   Updated: 2022/01/28 16:07:41 by ommohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	size_t			i;
 	unsigned char	*ch;
 
+	if (!src && !dst)
+		return (0);
 	i = -1;
 	ch = (unsigned char *)src;
 	while (++i < n)

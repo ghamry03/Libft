@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ommohame <ommohame@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/26 20:03:33 by ommohame          #+#    #+#             */
+/*   Updated: 2022/01/26 20:03:43 by ommohame         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef	struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;

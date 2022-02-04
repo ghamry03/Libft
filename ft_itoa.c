@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ommohame < ommohame@student.42abudhabi.ae> +#+  +:+       +#+        */
+/*   By: ommohame <ommohame@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 13:10:36 by ommohame          #+#    #+#             */
-/*   Updated: 2022/01/12 23:10:03 by ommohame         ###   ########.fr       */
+/*   Updated: 2022/01/28 16:30:13 by ommohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	num_len(long num, long *divide)
 
 /*
 * changes int n into *str
-* return the nrw str
+* return the new str
 */
 char	*ft_itoa(int n)
 {
